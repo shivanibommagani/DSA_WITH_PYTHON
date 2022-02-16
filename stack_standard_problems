@@ -21,7 +21,7 @@
 
 
 
-###############Nearest Greater to left ##############################
+###############Nearest Greater to left #################################################################################
 #def nearest_greater_toleft(arr):
 #    s=[]
 #    v=[]
@@ -41,7 +41,7 @@
 #    return v
 
 
-##########################Nearest greater to right  ###########################
+##########################Nearest greater to right  ##############################################################################
 
 #def nearest_greater_toright(arr):
 #    s=[]
@@ -61,7 +61,7 @@
 #        s.append(arr[i])
 #    return v[::-1]
 
-######################### Nearest smaller to right#############################
+######################### Nearest smaller to right#######################################################################
 
 
 #def nearest_smaller_toright(arr):
@@ -83,7 +83,7 @@
 #    return v[::-1]
 
 
-########################Stock_span#############################
+######################## Stock_span ##################################################################################
 
 
 #def stock_span(arr):
@@ -102,3 +102,57 @@
 #arr=[6,2,8,3]
 #print(stock_span(arr))
 #####output=[1,1,3,1]
+
+########################################AREA_OF_HISTOGRAM##############################################################
+
+#def nearest_smaller_toright_index(arr):
+#    s=[]
+#    v=[]
+#    for i in range(len(arr)-1,-1,-1):
+#        if len(s)==0:
+#            v.append(len(arr))
+#        elif len(s)>0 and s[-1]<arr[i]:
+#            v.append(arr.index(s[-1]))
+#        elif len(s)>0 and s[-1]>=arr[i]:
+#            while len(s)>0 and s[-1]>=arr[i]:
+#                s.pop()
+#            if len(s)==0:
+#                v.append(len(arr))
+#            else:
+#                v.append(arr.index(s[-1]))
+#        s.append(arr[i])
+#    return v[::-1]
+#
+#def nearest_smaller_toleft_index(arr):
+#    s=[]
+#    v=[]
+#    for i in range(0,len(arr)):
+#        if len(s)==0:
+#            v.append(-1)
+#        elif len(s)>0 and s[-1]<arr[i]:
+#            v.append(arr.index(s[-1]))
+#        elif len(s)>0 and s[-1]>=arr[i]:
+#            while len(s)>0 and s[-1]>=arr[i]:
+#                s.pop()
+#            if len(s)==0:
+#                v.append(-1)
+#            else:
+#                v.append(arr.index(s[-1]))
+#        s.append(arr[i])
+#    return v
+#
+#def area_of_histogram(arr):
+#    left=nearest_smaller_toleft_index(arr)
+#    right=nearest_smaller_toright_index(arr)
+#    areas=[]
+#    for i in range(0,len(arr)):
+#        areas.append(arr[i]*(right[i]-left[i]-1))
+#
+#    return max(areas)
+#
+#arr=[6,2,8,3]
+#print(area_of_histogram(arr))
+#output=8
+#arr2=[6,2,5,4,5,1,6]
+#print(area_of_histogram(arr2))
+#output=12
