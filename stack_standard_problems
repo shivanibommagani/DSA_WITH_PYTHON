@@ -210,3 +210,36 @@
 #
 #output:
 #balanced
+
+
+#############################sorting_using_another_stack#############################################
+
+#def create():
+#    s=[]
+#    return s
+#def top(stack):
+#    p=len(stack)
+#    return stack[p-1]
+#def push(item,stack):
+#    stack.append(item)
+#def isEmpty(stack):
+#    return len(stack) == 0
+#def pop(stack):
+#    if (isEmpty(stack)==True):
+#        print("Stack Underflow ")
+#    return stack.pop()
+#def prints(stack):
+#    for i in range(len(stack)-1, -1, -1):
+#        print(stack[i], end=' ')
+#    print()
+#
+#def sorted_stack(s):
+#    temp_stack=create()
+#    while isEmpty(s) == False:
+#        temp=top(s)
+#        pop(s)
+#        while isEmpty(temp_stack)==False and top(temp_stack)>temp:
+#            push(top(temp_stack),s)
+#            pop(temp_stack)
+#        push(temp,temp_stack)
+#    return temp_stack
