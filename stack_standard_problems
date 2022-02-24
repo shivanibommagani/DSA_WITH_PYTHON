@@ -156,3 +156,28 @@
 #arr2=[6,2,5,4,5,1,6]
 #print(area_of_histogram(arr2))
 #output=12
+
+#################### minimum no of reversals_to_balance_the _stack #############################
+#def no_reverse(expression):
+#    s=[]
+#    for i in expression:
+#        if i == "{":
+#            s.append(i)
+#        elif i== "}":
+#            if len(s)!=0 and s[-1]=="{":
+#                s.pop()
+#            elif len(s) == 0 or s[-1]=="}":
+#                s.append(i)
+#    new_len=len(s)
+#    c_openbrackets=0
+#    while len(s)!=0 and s[-1]=="{":
+#            s.pop()
+#            c_openbrackets+=1
+#    if new_len%2==0:
+#            return ((new_len//2)+(c_openbrackets%2))
+#    return -1
+#ex="}{{}{}"
+#print(no_reverse(ex))
+#output:
+#2
+#
