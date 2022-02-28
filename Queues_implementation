@@ -35,3 +35,54 @@
 #    print(q1.front())
 #    q1.dequeue()
 #print(q1.dequeue())
+#
+#
+########################_Queue_implementation_using_linkedlist_##################################
+#
+#
+#class Node:
+#    def __init__(self,data):
+#        self.data=data
+#        self.next=None
+#
+#class Queues_using_linkedlist:
+#    def __init__(self):
+#        self.__head=None
+#        self.__tail=None
+#        self.__count=0
+#    def enqueue(self,data):
+#        newNode=Node(data)
+#        if self.__head is None:
+#            self.__head=newNode
+#        else:
+#            self.__tail.next=newNode
+#        self.__tail=newNode
+#        self.__count+=1
+#    def dequeue(self):
+#        if self.__head==None:
+#            print("oopsieeee!Queue is empty")
+#            return
+#        dequeue_element=self.__head.data
+# #       self.__head=self.__head.next
+#        self.__count-=1
+#        return dequeue_element
+#    def front(self):
+#        if self.__head==None:
+#            print("Queue  is empty!")
+#            return
+#        return self.__head.data
+#    def size(self):
+#        return self.__count
+#    def is_empty(self):
+#        return self.__count==0
+#
+#q2=Queues_using_linkedlist()
+#q2.enqueue(2)
+#q2.enqueue(6)
+#q2.enqueue(8)
+#q2.enqueue(12)
+#q2.enqueue(15)
+#while q2.is_empty()==False:
+#    print(q2.dequeue())
+#q2.dequeue()
+
