@@ -1,0 +1,43 @@
+#########################_QUICK_SORT_#######################################
+#
+#def partion(a,si,ei):
+#    pivot=a[si]
+#    count=0
+#    for i in range(si,ei+1):
+#        if a[i]<pivot:
+#            count+=1
+#    a[si+count],a[si]=a[si],a[si+count]
+#    pivot_index=si+count
+#    i=si
+#    j=ei
+#    while i<j:
+#        if a[i]<pivot:
+#            i=i+1
+#        elif a[j]>pivot:
+#            j=j-1
+#        else:
+#            a[i],a[j]=a[j],a[i]
+#            i=i+1
+#            j=j-1
+#    return pivot_index
+#
+#
+#def quick_sort(a,si,ei):
+#    if si>=ei:
+#        return
+#    pivot_index=partion(a,si,ei)
+#    quick_sort(a,si,pivot_index-1)
+#
+#quick_sort(a,pivot_index+1,ei)
+#li=[10,2,7,4,5,3]
+#l=len(li)
+#print(partion(li,0,l-1))
+#print(li)
+#quick_sort(li,0,l-1)
+#print(li)
+#
+#
+#OUTPUT:
+#5
+#[3,2,7,4,5,10]
+#[2, 3, 4, 5, 7, 10]
