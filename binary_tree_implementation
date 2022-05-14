@@ -29,5 +29,12 @@
 #    print_tree(root.right)
 #
 #
+#def No_of_Nodes(root):
+#    if root == None:
+#        return 0
+#    l_count=No_of_Nodes(root.left)
+#    r_count=No_of_Nodes(root.right)
+#    return l_count+r_count+1
 #k = taking_input()
 #print_tree(k)
+#print(No_of_Nodes(k))
