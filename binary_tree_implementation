@@ -16,7 +16,7 @@
 #    root.right = right_child
 #    return root
 #
-#def print_tree(root):
+#def preorder_print_tree(root):
 #    if root == None:
 #        return
 #    print(root.data,end=":")
@@ -25,10 +25,15 @@
 #    if root.right != None:
 #        print("R",root.right.data)
 #    print()
-#    print_tree(root.left)
-#    print_tree(root.right)
+#    preorder_print_tree(root.left)
+#    preorder_print_tree(root.right)
 #
-#
+#def inorder_print_nodes(root):
+#    if root==None:
+#        return
+#    inorder_print_nodes(root.left)
+#    print(root.data)
+#   inorder_print_nodes(root.right)
 #def No_of_Nodes(root):
 #    if root == None:
 #        return 0
@@ -36,5 +41,6 @@
 #    r_count=No_of_Nodes(root.right)
 #    return l_count+r_count+1
 #k = taking_input()
-#print_tree(k)
+#preorder_print_tree(k)
 #print(No_of_Nodes(k))
+#inorder_print_tree(k)
