@@ -1,0 +1,110 @@
+#class BinarytreeNode:
+#    def __init__(self,data):
+#        self.data=data
+#        self.left=None
+#        self.right=None
+#
+#def taking_input():
+#    root_data=int(input())
+#    if root_data == -1:
+#        return None
+#    root=BinarytreeNode(root_data)
+#    lt=taking_input()
+#    rt=taking_input()
+#    root.left=lt
+#    root.right=rt
+#    return root
+#
+#
+#
+#####################check if a tree is balanced##########################################3
+#____________o(n^2)soln______________
+#def check_if_balanced(root):
+#    if root==None :
+#        return None
+#    l_ht=height(root.left)
+#    r_ht=height(root.right)
+#    if l_ht-r_ht>1 or r_ht-l_ht>1:
+#        return False
+#    else:
+#        return True
+#    isleftbalanced=check_if_balanced(root.left)
+#    isrightbalanced=check_if_balanced(root.right)
+#    if isleftbalanced and isrightbalanced:
+#        return True
+#    else:
+#        return False
+#def height(root):
+#    if root==None:
+#        return 0
+#    l_ht=height(root.left)
+#    r_ht=height(root.right)
+#    return 1+max(l_ht,r_ht)
+#
+#____________________________________O(n)  soln_________________________________________________
+#def checkifbalanced_and_height(root):
+#    if root==None:
+#        return 0,True
+#    l_h,isleftbalanced=checkifbalanced_and_height(root.left)
+#    r_h,isrightbalanced=checkifbalanced_and_height(root.right)
+#    h=1+max(l_h,r_h)
+#    if abs(l_h-r_h)>1:
+#        return h,False
+#    if isleftbalanced and isrightbalanced:
+#        return h,True
+#    else:
+#        return h,False
+#
+###############################diameter of tree#####################################
+#def diameter_of_tree(root):
+#    if root==None:
+#        return 0,0
+#    l_h,l_d=diameter_of_tree(root.left)
+#    r_h,r_d=diameter_of_tree(root.right)
+#    h=max(l_h,r_h)+1
+#    curr_dia=r_h+l_h
+#    return h,max(r_d,l_d,curr_dia)
+#
+#
+######################################level_wise################################
+#
+#import queue
+#def level_wise_input():
+#    q=queue.Queue()
+#    print("enter root:")
+#    root_data=int(input())
+#    if root_data != -1:
+#        root=Binarytreenode(root_data)
+#        q.put(root)
+#    while(not(q.empty())):
+#        curr_node=q.get()
+#        print("enter left child",curr_node.data)
+#        left_child=int(input())
+#        if left_child!=-1:
+#            lt=Binarytreenode(left_child)
+#            curr_node.left=lt
+#            q.put(lt)
+#        print("enter right child:",curr_node.data)
+#        right_child=int(input())
+#        if right_child!=-1:
+#            rt=Binarytreenode(right_child)
+#            curr_node.right=rt
+#            q.put(rt)
+#    return root
+#
+#def print_level_wise(root):
+#    q=queue.Queue()
+#    if root == None:
+#        return None
+#    q.put(root)
+#    while(not(q.empty())):
+#        curr_node=q.get()
+#        print(curr_node.data,end=":")
+#        if curr_node.left!=None:
+#            q.put(curr_node.left)
+#            print("L",curr_node.left.data,end=",")
+#        if curr_node.right!=None:
+#            q.put(curr_node.right)
+#            print("R",curr_node.right.data,end=" ")
+#        print()
+
